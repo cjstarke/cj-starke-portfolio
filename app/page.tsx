@@ -1,69 +1,82 @@
-import Image from "next/image";
+import WorkSection from "./components/WorkSection";
+import ContactSection from "./components/ContactSection";
+
+const skills = [
+  "React",
+  "Next.js",
+  "TypeScript",
+  "JavaScript",
+  "HTML",
+  "CSS",
+  "Tailwind CSS",
+  "Playwright",
+  "React Admin",
+  "Node.js",
+  "Ruby on Rails",
+  "Strapi CMS",
+  "GraphQL",
+  "Spring Boot",
+  "Java",
+  "MariaDB",
+  "MongoDB",
+  "PostgreSQL",
+  "MySQL",
+  "AWS",
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div id="top" className="flex flex-1 flex-col">
+      <section
+        id="about"
+        className="flex min-h-screen flex-col justify-center border-b border-black px-6 py-24"
+      >
+        <div className="mx-auto flex w-full max-w-lg md:max-w-6xl flex-col-reverse items-center gap-12 md:flex-row md:items-start md:justify-between">
+          <div className="flex flex-col md:max-w-2xl">
+            <p className="text-sm lg:text-base font-medium uppercase tracking-wide">
+              Software Engineer / Full Stack
+            </p>
+            <h1
+              id="hero-heading"
+              className="mt-2 text-6xl lg:text-7xl font-semibold tracking-tight md:text-5xl"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              Hi, I&apos;m CJ Starke
+            </h1>
+            <p className="mt-6 text-base lg:text-xl leading-relaxed text-pretty">
+              I&apos;m a full stack developer with 7 years of experience building
+              production web applications. My focus on digital marketing
+              informs how I approach user experience and creative problem
+              solving. I bring curiosity, care, and a collaborative attitude
+              to every role.
+            </p>
+
+            <ul className="mt-8 flex flex-row flex-wrap gap-3">
+              {skills.map((skill) => (
+                <li
+                  key={skill}
+                  className="rounded-sm border border-black px-3 py-1 text-sm transition-colors hover:bg-black hover:text-white"
+                >
+                  {skill}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="shrink-0 rounded-sm border border-black bg-frameLime p-frame shadow-frame">
+            <div className="h-48 w-48 overflow-hidden rounded-sm border border-black md:h-72 md:w-72">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/cjstarkeprofilepic.jpg"
+                alt="CJ Starke"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </section>
+      <WorkSection />
+      <ContactSection />
     </div>
   );
 }
+
