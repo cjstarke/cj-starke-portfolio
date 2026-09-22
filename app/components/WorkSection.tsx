@@ -20,8 +20,8 @@ const projects = [
       "https://converge-strapi-prod.s3.us-east-1.amazonaws.com/venndiagram_4a5ab32d06.webm",
       "https://converge-strapi-prod.s3.us-east-1.amazonaws.com/ourwork_6bddbcff5e.webm",
     ],
-    projectUrl: "#",
-    githubUrl: "#",
+    projectUrl: "https://www.convergemarketing.com/",
+    githubUrl: "https://github.com/cjstarke/marketing-animations",
   },
   {
     id: "project-two",
@@ -45,8 +45,8 @@ const projects = [
       "https://converge-strapi-prod.s3.us-east-1.amazonaws.com/clform_39669fee8d.webm",
       "https://converge-strapi-prod.s3.us-east-1.amazonaws.com/thankyou_5d72d1c555.webp",
     ],
-    projectUrl: "#",
-    githubUrl: "#",
+    projectUrl: "https://www.consumerlifeline.com/herniamesh5/",
+    githubUrl: "https://github.com/cjstarke/medical-tort-mobile-form",
   },
   {
     id: "project-three",
@@ -62,8 +62,8 @@ const projects = [
       "https://converge-strapi-prod.s3.us-east-1.amazonaws.com/map_e309ec6075.webp",
       "https://converge-strapi-prod.s3.us-east-1.amazonaws.com/carousel_7e4e2f053e.webp",
     ],
-    projectUrl: "#",
-    githubUrl: "#",
+    projectUrl: "https://www.topgutterguardsystem.com/free-estimate/",
+    githubUrl: "https://github.com/cjstarke/home-service-multistep-form",
   },
 ];
 
