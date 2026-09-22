@@ -54,7 +54,7 @@ export default function Home() {
               {skills.map((skill) => (
                 <li
                   key={skill}
-                  className="rounded-sm border border-black px-3 py-1 text-sm transition-colors hover:bg-black hover:text-white"
+                  className="rounded-sm border border-black px-3 py-1 text-sm"
                 >
                   {skill}
                 </li>
